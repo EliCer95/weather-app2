@@ -21,9 +21,13 @@ div.day {
   border: 1px solid black;
   margin: 10px 30px;
   padding: 20px;
+  line-height: 1.5;
 }
 p {
   text-align: center;
   font-family: monospace;
   padding-top: 20px;
+}
+#description {
+  text-transform: capitalize;
 }

@@ -12,6 +12,7 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container box">
@@ -32,14 +33,14 @@
       </form>
       <div class="row">
         <div class="col info">
-          <h1>Luxembourg</h1>
+          <h1 id="city">Luxembourg</h1>
 
           <br />
-          Thursday, 15:45, Sunny
-          <br />
-          Humidity: 43%, Wind: 3km/h
+          Thursday, 15:45, <span id="description">Sunny </span><br />
+          Humidity: <span id="humidity">43</span>%, Wind:
+          <span id="wind">3</span>km/h
         </div>
-        <div class="col weather">☀️ 22°C</div>
+        <div class="col weather">☀️ <span id="temperature">22</span>°C</div>
       </div>
       <div class="row forecast">
         <div class="col day">Friday<br />☀️<br />22°C</div>
@@ -48,7 +49,12 @@
         <div class="col day">Monday<br />☀️<br />22°C</div>
       </div>
     </div>
-    <p>Coded by Eliska Cerna</p>
+    <p>
+      <a href="https://distracted-roentgen-197b7f.netlify.app/" target="_blank"
+        >Open-source code</a
+      >
+      by Eliska Cerna
+    </p>
     <script src="src/app.js"></script>
   </body>
 </html>
