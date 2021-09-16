@@ -1,0 +1,23 @@
+div.box {
+  border: 1px solid black;
+  max-width: 800px;
+  padding: 20px;
+  margin-top: 50px;
+}
+div.forecast {
+  margin-top: 50px;
+  text-align: center;
+}
+div.weather {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 40px;
+}
+div.info {
+  padding-top: 20px;
+}
+div.day {
+  border: 1px solid black;
+  margin: 10px 30px;
+  padding: 20px;
+}

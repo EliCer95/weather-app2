@@ -14,25 +14,24 @@
     />
   </head>
   <body>
-    <div class="container">
-      <form class="row g-6">
-        <div class="col-auto">
+    <div class="container box">
+      <form class="row" style="width: 100%">
+        <div class="col">
           <label for="inputPassword2" class="visually-hidden">Password</label>
           <input
-            type="password"
+            type="search"
             class="form-control"
-            id="inputPassword2"
-            placeholder="Password"
+            id="inputCity2"
+            placeholder="Enter a city"
           />
         </div>
-        <div class="col-auto">
-          <button type="submit" class="btn btn-primary mb-3">
-            Confirm identity
-          </button>
+        <div class="col">
+          <button type="submit" class="btn btn-primary mb-3">Search</button>
+          <button type="submit" class="btn btn-primary mb-3">Current</button>
         </div>
       </form>
       <div class="row">
-        <div class="col">
+        <div class="col info">
           Luxembourg
 
           <br />
@@ -40,13 +39,13 @@
           <br />
           Humidity: 43%, Wind: 3km/h
         </div>
-        <div class="col">☀️ 22°C</div>
+        <div class="col weather">☀️ 22°C</div>
       </div>
-      <div class="row">
-        <div class="col">Friday<br />☀️<br />22°C</div>
-        <div class="col">Saturday<br />☀️<br />22°C</div>
-        <div class="col">Sunday<br />☀️<br />22°C</div>
-        <div class="col">Monday<br />☀️<br />22°C</div>
+      <div class="row forecast">
+        <div class="col day">Friday<br />☀️<br />22°C</div>
+        <div class="col day">Saturday<br />☀️<br />22°C</div>
+        <div class="col day">Sunday<br />☀️<br />22°C</div>
+        <div class="col day">Monday<br />☀️<br />22°C</div>
       </div>
     </div>
     <script src="src/app.js"></script>
