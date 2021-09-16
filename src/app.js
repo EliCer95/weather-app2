@@ -42,9 +42,19 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
-let apiKey = "5af297a6d7993b7bb3c2ec51eeeaccd4";
-let city = "Sydney";
-let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-console.log(apiUrl);
 
-axios.get(apiUrl).then(displayTemperature);
+function search(city) {
+  let apiKey = "5af297a6d7993b7bb3c2ec51eeeaccd4";
+  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#inputCity2");
+  search(inputCity2.value);
+}
+
+search("New York");
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
