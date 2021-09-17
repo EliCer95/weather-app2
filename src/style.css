@@ -11,7 +11,7 @@ div.forecast {
 div.weather {
   text-align: center;
   padding-top: 50px;
-  font-size: 40px;
+  font-size: 50px;
 }
 div.info {
   padding-top: 20px;
@@ -30,4 +30,21 @@ p {
 }
 #description {
   text-transform: capitalize;
+}
+
+#celsius {
+  text-decoration: none;
+}
+
+#fahrenheit {
+  text-decoration: none;
+}
+
+.active {
+  color: black;
+}
+.active:hover {
+  cursor: default;
+  color: black;
+  text-decoration: none;
 }
