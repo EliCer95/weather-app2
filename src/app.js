@@ -1,26 +1,28 @@
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thrusday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  ];
-  let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+let date = new Date();
+
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thrusday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
+let day = days[date.getDay()];
+let minutes = date.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
 }
+let hours = date.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+
+let thisDay = document.querySelector("#date");
+
+thisDay.innerHTML = `${day}, ${hours}:${minutes}`;
 
 function displayTemperature(response) {
   let temperature = document.querySelector("#temperature");
@@ -38,7 +40,7 @@ function displayTemperature(response) {
   description.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = Math.round(response.data.main.humidity);
   wind.innerHTML = Math.round(response.data.wind.speed);
-  date.innerHTML = formatDate(response.data.dt * 1000);
+
   icon.setAttribute(
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -77,7 +79,7 @@ function showCelsius(event) {
 function searchLocation(position) {
   let apiKey = "5af297a6d7993b7bb3c2ec51eeeaccd4";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  
+
   axios.get(apiUrl).then(displayTemperature);
 }
 
