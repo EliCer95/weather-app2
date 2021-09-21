@@ -70,3 +70,10 @@ p {
 .open-source {
   text-decoration: none;
 }
+
+.max-temp {
+  font-size: 23px;
+}
+.min-temp {
+  color: black;
+}
