@@ -14,9 +14,8 @@ div.box {
   margin-top: 50px;
   border-radius: 10px;
 }
-div.forecast {
-  margin-top: 50px;
-  text-align: center;
+div.main-data {
+  margin-bottom: 30px;
 }
 div.weather {
   text-align: center;
@@ -31,14 +30,18 @@ div.info {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: rgba(0, 0, 0, 0.397);
 }
-div.day {
+div.weather-forecast {
+  margin-top: 10px;
+}
+div.next-day {
   border: 2px solid #0b5ed7;
   box-shadow: 5px 5px 5px #0b5dd73d;
   background-color: #0b5dd7;
   color: white;
-  margin: 10px 20px;
-  padding: 20px;
-  line-height: 1.5;
+  margin: 10px;
+  text-align: center;
+  padding: 15px;
+  line-height: 5px;
   font-family: Georgia, "Times New Roman", Times, serif;
   border-radius: 10px;
 }

@@ -47,6 +47,31 @@ function displayTemperature(response) {
   );
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thursday", "Friday", "Saturday", "Sunday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `     <div class="col next-day">
+            <div class="day">${day}</div>
+            <img
+              src="http://openweathermap.org/img/wn/50d@2x.png"
+              id="icon-friday"
+            />
+            <div class="temperatures">
+              <span class="max-temp">22° </span>
+              <span class="min-temp">14°</span>
+            </div>
+          </div>
+        `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function search(city) {
   let apiKey = "5af297a6d7993b7bb3c2ec51eeeaccd4";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -103,3 +128,5 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", handleClick);
 
 search("New York");
+
+displayForecast();
