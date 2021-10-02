@@ -33,10 +33,11 @@ div.info {
   padding-top: 20px;
   margin-left: 30px;
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: rgba(0, 0, 0, 0.397);
+  color: rgba(255, 255, 255, 0.795);
 }
 div.weather-forecast {
   margin-top: 10px;
+  color: rgba(0, 0, 0, 0.644);
 }
 div.next-day {
   margin: 0px 5px;
@@ -60,9 +61,9 @@ p {
 }
 
 .max-temp {
-  color: black;
+  color: #4d2ba3bd;
   font-size: 23px;
 }
 .min-temp {
-  color: black;
+  color: rgba(0, 0, 0, 0.664);
 }
